@@ -23,7 +23,7 @@ int main()
     }
     catch (exception ex)
     {
-        cout << ex.what << endl;
+        cout << ex.what() << endl;
         exit(1);
     }
 }
@@ -39,8 +39,8 @@ void AccessibleList(int Moked, List*& NetStructre, int NumberOfPCs)
     FindAccessible(NetStructre, Moked, ColorsArray, accessibleList_Req);
     accessibleList_Req.Print();
 
-    FindAccessible_NotReq
-        accessibleList_NotReq.Print();
+    //FindAccessible_NotReq
+    //accessibleList_NotReq.Print();
 
     Utilities::CleanAllMess(NetStructre, NumberOfPCs, accessibleList_Req, accessibleList1_NotReq, ColorsArray);
 }

@@ -28,7 +28,6 @@ public:
 	static void BuildNetStructre(List*& NetStructre, int NumOfPCs, int NumOfConnections)
 	{
 		SetAllNetStructureEmpty(NetStructre, NumOfPCs);
-
 		for (int i = 0; i < NumOfConnections; i++)
 		{
 			int fromPC;
@@ -36,7 +35,9 @@ public:
 			cin >> fromPC;
 			cin >> toPC;
 			if (!isInputCorrect(fromPC, toPC, NumOfPCs))
-				throw (new exception("Wrong values of pc connections were inputed."));
+			{
+				throw (invalid_argument("Wrong values of pc connections were inputed."));
+			}
 			ListNode* addNode = new ListNode(toPC, WHITE, nullptr);
 			NetStructre[fromPC - 1].InsertAtTheEnd(addNode);
 		}

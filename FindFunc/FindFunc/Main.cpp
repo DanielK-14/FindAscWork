@@ -58,3 +58,12 @@ void FindAccessible(List*& NetStructre, int& Toran, int*& ColorArray, List& acce
         current = current->next;
     }
 }
+
+void FindAccessible_NotReq(List*& NetStructre, int& Toran, int*& ColorArray, List& accessibleList)
+{
+    ColorArray[Toran - 1] = BLACK;
+    ListNode* nodeToAdd = new ListNode(Toran, BLACK, nullptr);
+    accessibleList.InsertAtTheEnd(nodeToAdd);
+
+    while()
+}

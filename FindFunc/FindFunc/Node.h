@@ -5,12 +5,12 @@
 
 class Node 
 {
-private:
+public:
 	List* data;
 	Node* next;
 
 public:
-	Node(List* _data, Node* _next);
+	Node(List& _data, Node* _next);
 };
 
 #endif 

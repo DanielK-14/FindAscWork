@@ -1,7 +1,7 @@
 #include "Node.h"
 
-Node::Node(List* _data, Node* _next)
+Node::Node(List& _data, Node* _next)
 {
-	data = _data;
+	data = &_data;
 	next = _next;
 }

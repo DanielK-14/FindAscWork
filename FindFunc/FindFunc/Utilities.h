@@ -38,7 +38,7 @@ public:
 			{
 				throw (invalid_argument("Wrong values of pc connections were inputed."));
 			}
-			ListNode* addNode = new ListNode(toPC, WHITE, nullptr);
+			ListNode* addNode = new ListNode(toPC, nullptr);
 			NetStructre[fromPC - 1].InsertAtTheEnd(addNode);
 		}
 	}

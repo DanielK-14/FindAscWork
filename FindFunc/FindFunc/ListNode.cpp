@@ -3,14 +3,12 @@
 ListNode::ListNode()
 {
 	PC_Number = 0;
-	color = WHITE;
 	next = NULL;
 }
 
-ListNode::ListNode(int number, int newColor, ListNode* ptr)
+ListNode::ListNode(int number, ListNode* ptr)
 {
 	PC_Number = number;
-	color = newColor;
 	next = ptr;
 }
 

@@ -6,6 +6,7 @@ using namespace std;
 
 #include "ListNode.h"
 #include "List.h"
+#include "Node.h"
 
 typedef List ItemType;
 class Stack 
@@ -17,8 +18,8 @@ class Stack
 		~Stack();
 		void makeEmpty();
 		int isEmpty();
-		void push(ItemType* item);
-		ItemType* pop();
+		void push(ItemType& item);
+		ItemType& pop();
 };
 
 #endif

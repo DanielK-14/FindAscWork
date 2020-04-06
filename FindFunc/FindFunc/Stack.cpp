@@ -1,5 +1,4 @@
 #include "Stack.h"
-#include "Node.h"
 
 Stack::Stack()
 {
@@ -13,7 +12,7 @@ Stack::~Stack()
 
 void Stack::makeEmpty()
 {
-	ItemType *temp;
+	Node *temp;
 	while (top != nullptr)
 	{
 		temp = top;
@@ -27,20 +26,20 @@ int Stack::isEmpty()
 	return(top == nullptr);
 }
 
-void Stack::push(ItemType* item)
+void Stack::push(ItemType& item)
 {
 	top = new Node(item,top);
 }
 
-ItemType* Stack::pop()
+ItemType& Stack::pop()
 {
 	if (isEmpty())
 	{
 		cout << "Error: STACK UNDERFLOW\n";
 		exit(1);
 	}
-	ItemType* temp = top;
-	ItemType* item = top->data;
+	Node* temp = top;
+	ItemType& item = *(top->data);
 	top = top->next;
 	delete temp;
 	return item;

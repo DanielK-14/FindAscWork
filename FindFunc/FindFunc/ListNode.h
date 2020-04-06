@@ -11,11 +11,10 @@ class ListNode
 {
 public:
 	int PC_Number;
-	int color;
 	ListNode* next;
 
 	ListNode();
-	ListNode(int number, int newColor, ListNode* ptr = nullptr);
+	ListNode(int number, ListNode* ptr = nullptr);
 	void insertAfter(ListNode* newNode);
 	void deleteAfter();
 };

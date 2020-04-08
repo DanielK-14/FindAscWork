@@ -19,6 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AccessibleArray.h" />
+    <ClInclude Include="ArrayNode.h" />
     <ClInclude Include="List.h" />
     <ClInclude Include="ListNode.h" />
     <ClInclude Include="Node.h" />
@@ -26,6 +28,8 @@
     <ClInclude Include="Utilities.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AccessibleArray.cpp" />
+    <ClCompile Include="ArrayNode.cpp" />
     <ClCompile Include="List.cpp" />
     <ClCompile Include="ListNode.cpp" />
     <ClCompile Include="Main.cpp" />

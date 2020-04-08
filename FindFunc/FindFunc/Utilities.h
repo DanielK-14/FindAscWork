@@ -2,6 +2,7 @@
 #define UTILITIES_H
 
 #include "List.h"
+#include "AccessibleArray.h"
 
 class Utilities
 {
@@ -50,11 +51,9 @@ public:
 		return true;
 	}
 
-	static void CleanAllMess(List*& NetStructre, int NumberOfPCs, List& list1, List& list2, int*& ColorsArray)
+	static void CleanAllMess(List*& NetStructre, int NumberOfPCs, int*& ColorsArray)
 	{
 		DeleteArrayOfLists(NetStructre, NumberOfPCs);
-		list1.DeleteList();
-		list2.DeleteList();
 		delete[] ColorsArray;
 	}
 };

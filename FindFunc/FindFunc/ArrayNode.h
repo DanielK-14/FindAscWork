@@ -15,7 +15,7 @@ public:
 
 	ArrayNode();
 	ArrayNode(int number, int next);
-	void insertAfter(ArrayNode newNode);
+	void insertAfter(ArrayNode newNode, int head);
 	void deleteAfter();
 };
 

@@ -181,8 +181,8 @@ void FindAccessible_NotReq(List*& NetStructre, int& Toran, int*& ColorArray, Arr
 {
     ColorArray[Toran - 1] = BLACK;
     ArrayNode nodeToAdd = ArrayNode(Toran, -1);
-    //accessibleList.InsertAtTheEnd(nodeToAdd);
-    addNodeToArray(accessibleList, nodeToAdd, Toran);
+    accessibleList.InsertAtTheEnd(nodeToAdd, Toran);
+    //addNodeToArray(accessibleList, nodeToAdd, Toran);
 
     Stack stack;
     stack.push(NetStructre[Toran - 1]);
@@ -198,8 +198,8 @@ void FindAccessible_NotReq(List*& NetStructre, int& Toran, int*& ColorArray, Arr
         {
             //ListNode* nodeToAdd = new ListNode(currentListNode->PC_Number, nullptr);
             ArrayNode nodeToAdd = ArrayNode(currentListNode->PC_Number, -1);
-            //accessibleList.InsertAtTheEnd(nodeToAdd);
-            addNodeToArray(accessibleList, nodeToAdd, Toran);
+            accessibleList.InsertAtTheEnd(nodeToAdd, currentListNode->PC_Number);
+            //addNodeToArray(accessibleList, nodeToAdd, Toran);
             ColorArray[currentListNode->PC_Number - 1] = BLACK;
             currentListNode = currentListNode->next;
             if (currentListNode == nullptr)
@@ -209,8 +209,8 @@ void FindAccessible_NotReq(List*& NetStructre, int& Toran, int*& ColorArray, Arr
         {
             //ListNode* nodeToAdd = new ListNode(currentListNode->PC_Number, nullptr);
             ArrayNode nodeToAdd = ArrayNode(currentListNode->PC_Number, -1);
-            //accessibleList.InsertAtTheEnd(nodeToAdd);
-            addNodeToArray(accessibleList, nodeToAdd, Toran);
+            accessibleList.InsertAtTheEnd(nodeToAdd, currentListNode->PC_Number);
+            //addNodeToArray(accessibleList, nodeToAdd, Toran);
             stack.push(*currentList);
             stack.push(NetStructre[currentListNode->PC_Number - 1]);
             ColorArray[currentListNode->PC_Number - 1] = BLACK;

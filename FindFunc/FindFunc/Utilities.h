@@ -1,6 +1,8 @@
 #ifndef UTILITIES_H
 #define UTILITIES_H
 
+#include <stdexcept>
+#include <string>
 #include "List.h"
 #include "AccessibleArray.h"
 
@@ -46,8 +48,10 @@ public:
 
 	static bool isInputCorrect(int fromPC, int toPC, int NumOfPCs)
 	{
-		if (fromPC > NumOfPCs || fromPC < 0 || toPC > NumOfPCs || toPC < 0)
-			return false;
+		if (fromPC > NumOfPCs || fromPC < 0)
+			throw invalid_argument("no such computer " + to_string(fromPC));
+		if (toPC > NumOfPCs || toPC < 0)
+			throw invalid_argument("no such computer " + to_string(toPC));
 		return true;
 	}
 

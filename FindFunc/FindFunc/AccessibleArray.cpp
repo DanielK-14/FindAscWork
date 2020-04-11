@@ -61,4 +61,5 @@ void AccessibleArray::print()
 		cout << arr[i].data << " ";
 		i = arr[i].next;
 	}
+	cout << endl;
 }

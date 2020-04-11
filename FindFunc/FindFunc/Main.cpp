@@ -23,12 +23,11 @@ int main()
         cin >> moked;
         if (cin.fail())
             throw invalid_argument("Wrong type of input.");
-        if (!Utilities::isInputCorrect(moked, moked, numberOfPCs))
-            throw invalid_argument("Moked no exist.");
+        Utilities::isInputCorrect(moked, moked, numberOfPCs);
 
         AccessibleList(moked, NetStructre, numberOfPCs);
     }
-    catch (exception ex)
+    catch (invalid_argument ex)
     {
         cout << ex.what() << endl;
         exit(1);
@@ -47,7 +46,6 @@ void AccessibleList(int Moked, List*& NetStructre, int NumberOfPCs)
     accessibleList_Req.print();
 
     Utilities::SetAllWhite(ColorsArray, NumberOfPCs);
-    cout << "\n- - - - - - - - - - - - - - - - -" << endl;
 
     FindAccessible_NotReq(NetStructre, Moked, ColorsArray, accessibleList_NotReq);
     accessibleList_NotReq.print();
